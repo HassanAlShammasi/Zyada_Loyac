@@ -127,7 +127,7 @@
             <i class="fas fa-chevron-left"></i>
         </button>
         <div id="slide-counter" class="flex items-center justify-center text-white font-bold w-16 select-none">
-            1 / 13
+            1 / 12
         </div>
         <button onclick="nextSlide()" class="btn-nav bg-zyada-orange hover:bg-orange-600 text-white">
             <i class="fas fa-chevron-right"></i>
@@ -143,7 +143,7 @@
                 <div class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
                 <div class="z-10 text-center">
                     <div class="mb-8 relative inline-block">
-                        <img src="zyada_logo.png" alt="Zyada Logo" class="h-48 w-auto rounded-xl shadow-2xl object-contain bg-white/10 backdrop-blur-sm p-2 border border-white/20">
+                        <img src="logo.png" alt="Zyada Logo" class="h-48 w-auto object-contain drop-shadow-2xl">
                     </div>
                     <h2 class="text-3xl font-light tracking-wide mb-4">The Region’s First Unified Student Lifestyle Platform.</h2>
                     <div class="w-24 h-1 bg-zyada-orange mx-auto my-6"></div>
@@ -155,37 +155,74 @@
         <!-- SLIDE 2: PROBLEM -->
         <div class="slide" id="slide-2">
             <div class="flex h-full">
-                <div class="w-1/2 bg-gray-900 relative overflow-hidden flex items-center justify-center">
-                    <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
-                    <img src="https://images.unsplash.com/photo-1534330207526-9e4e75c2059f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Disappointed Student" class="object-cover w-full h-full opacity-80">
-                    <div class="absolute bottom-10 left-10 z-20">
-                        <div class="bg-red-600 text-white px-4 py-2 font-bold text-sm uppercase tracking-wider inline-block mb-2">The Problem</div>
-                        <h2 class="text-4xl font-bold text-white leading-tight">The Student Budget<br>Problem.</h2>
+                <!-- Left: Visual Emotion -->
+                <div class="w-5/12 bg-gray-900 relative overflow-hidden flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-80"></div>
+                    <img src="https://images.unsplash.com/photo-1534330207526-9e4e75c2059f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Stressed Student" 
+                         class="object-cover w-full h-full opacity-60 grayscale hover:grayscale-0 transition duration-700 ease-in-out">
+                    <div class="absolute bottom-12 left-10 z-20">
+                        <div class="bg-red-600 text-white px-3 py-1 font-bold text-xs uppercase tracking-widest inline-block mb-3 rounded-sm">The Pain</div>
+                        <h2 class="text-5xl font-bold text-white leading-none">The Student<br>Budget<br>Crisis.</h2>
                     </div>
                 </div>
-                <div class="w-1/2 p-16 flex flex-col justify-center">
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="text-zyada-blue font-bold uppercase tracking-wider text-sm mb-2">The Story</h3>
-                            <p class="text-gray-700 text-lg leading-relaxed border-l-4 border-zyada-orange pl-4 italic">
-                                "Meet Ali. He wants to travel and take boxing classes. But he just checked his bank account, and it’s empty. Not because he was reckless, but because the cost of <b>existing</b> ate up his budget for <b>living</b>."
+
+                <!-- Right: The Narrative -->
+                <div class="w-7/12 p-16 flex flex-col justify-center bg-white">
+                    <div class="space-y-10">
+                        
+                        <!-- The Persona (Emotional Hook) -->
+                        <div class="relative pl-6 border-l-4 border-zyada-orange">
+                            <h3 class="text-gray-400 font-bold uppercase tracking-wider text-xs mb-2">The Persona</h3>
+                            <p class="text-2xl text-gray-800 font-light italic leading-snug">
+                                "Meet Ali. The cost of <span class="font-bold text-gray-900">existing</span> just ate up his budget for <span class="font-bold text-zyada-orange">living</span>."
                             </p>
                         </div>
-                        <div>
-                            <h3 class="text-zyada-blue font-bold uppercase tracking-wider text-sm mb-2">The Harsh Fact</h3>
-                            <p class="text-gray-800 text-xl font-semibold">
-                                The student discount landscape is <span class="text-red-600">fragmented & archaic</span>.
+
+                        <!-- The Market Failure (Logical Hook) -->
+                        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-zyada-blue">
+                                    <i class="fas fa-search-dollar"></i>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">The Market Failure</h3>
+                            </div>
+                            <p class="text-gray-600 text-lg mb-4">
+                                Great offers are <span class="text-red-600 font-bold">locked away</span> or impossible to find.
                             </p>
-                            <p class="text-gray-600 mt-2">
-                                Savings are hidden in messy WhatsApp groups or restricted to specific banks. 135,000 students struggle to access the savings they deserve.
-                            </p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-start gap-2 text-sm text-gray-600">
+                                    <i class="fas fa-lock text-red-500 mt-1"></i> 
+                                    <span><b>Exclusive to Specific Banks</b> (NBK, KFH)</span>
+                                </div>
+                                <div class="flex items-start gap-2 text-sm text-gray-600">
+                                    <i class="fas fa-layer-group text-red-500 mt-1"></i> 
+                                    <span><b>App Overload:</b> "One app for each store"</span>
+                                </div>
+                                <div class="flex items-start gap-2 text-sm text-gray-600">
+                                    <i class="fas fa-qrcode text-red-500 mt-1"></i> 
+                                    <span>Messy Barcodes</span>
+                                </div>
+                                <div class="flex items-start gap-2 text-sm text-gray-600">
+                                    <i class="fas fa-id-card text-red-500 mt-1"></i> 
+                                    <span>Forgotten Student IDs</span>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="text-zyada-blue font-bold uppercase tracking-wider text-sm mb-2">The Opportunity</h3>
-                            <p class="text-gray-700">
-                                We can unify this chaos into one app that instantly verifies students and tracks every redemption.
-                            </p>
+
+                        <!-- The Result -->
+                        <div class="flex items-center justify-between border-t pt-6 border-gray-100">
+                            <div>
+                                <div class="text-4xl font-bold text-gray-900">135,000</div>
+                                <div class="text-sm text-gray-500 uppercase tracking-wide">Students in Kuwait</div>
+                            </div>
+                            <div class="h-10 w-px bg-gray-200"></div>
+                            <div class="text-right">
+                                <div class="text-xl font-bold text-zyada-blue">Zero</div>
+                                <div class="text-sm text-gray-500 uppercase tracking-wide">Centralized Hubs</div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -193,7 +230,7 @@
 
         <!-- SLIDE 3: MARKET SIZE -->
         <div class="slide" id="slide-3">
-            <div class="h-full p-12 flex flex-col">
+            <div class="h-full p-12 flex flex-col relative">
                 <div class="mb-8 border-b pb-4 border-gray-200">
                     <h2 class="text-4xl font-bold text-gray-900">Market Size</h2>
                     <p class="text-gray-500 text-lg mt-1">Starting in Kuwait, Scaling to MENA.</p>
@@ -241,6 +278,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- FOOTNOTE -->
+                <div class="absolute bottom-4 left-12 text-[10px] text-gray-400">
+                    Source: UNESCO Institute for Statistics (UIS) & Central Statistical Bureau (CSB) Kuwait, 2023/2024.
+                </div>
             </div>
         </div>
 
@@ -252,10 +293,6 @@
                     <p class="text-2xl font-light leading-relaxed opacity-90 mb-8">
                         The region’s first unified digital wallet that aggregates offers from banks, brands, and local spots into one ecosystem.
                     </p>
-                    <div class="mt-auto">
-                        <div class="text-orange-300 font-bold uppercase tracking-wider text-sm mb-2">Why Now?</div>
-                        <p class="text-lg">Rising costs are limiting students from the experiences life has to offer. We bridge that gap.</p>
-                    </div>
                 </div>
                 <div class="w-7/12 p-16 flex flex-col justify-center bg-gray-50">
                     <div class="grid grid-cols-1 gap-8">
@@ -297,191 +334,105 @@
             </div>
         </div>
 
-        <!-- SLIDE 5: EXPERIENCE PART 1 (Personalization) -->
+        <!-- SLIDE 5: EXPERIENCE PART 1 -->
         <div class="slide" id="slide-5">
-            <div class="h-full p-12 flex flex-col items-center">
-                <div class="text-center mb-10">
+            <div class="h-full pt-8 px-12 flex flex-col items-center">
+                <div class="text-center mb-6">
                     <h2 class="text-4xl font-bold text-gray-900">The Experience: Personalization</h2>
                     <p class="text-gray-500 mt-2">Seamless integration into Ali's digital life.</p>
                 </div>
                 <div class="flex items-end justify-center gap-12 w-full h-full pb-8">
-                    <!-- Feature 1 -->
+                    
+                    <!-- Feature 1: IMAGE PLACEHOLDER -->
                     <div class="w-1/3 flex flex-col items-center">
-                        <div class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-64 h-[500px] border-4 border-gray-900 relative bg-white overflow-hidden">
-                            <div class="bg-gray-100 w-full h-full rounded-[2rem] p-4">
-                                <div class="flex justify-between items-center mb-6">
-                                    <div class="font-bold text-zyada-blue">Zyada</div>
-                                    <i class="fas fa-user-circle text-gray-400"></i>
-                                </div>
-                                <div class="text-lg font-bold mb-2">Hi, Ali 👋</div>
-                                <div class="text-xs text-gray-500 mb-4">Recommended for you:</div>
-                                <div class="bg-white p-3 rounded-lg shadow-sm mb-3 border-l-4 border-zyada-orange">
-                                    <div class="flex justify-between">
-                                        <div class="text-sm font-bold">Boxing Class</div>
-                                        <div class="text-xs bg-green-100 text-green-800 px-2 rounded">-20%</div>
-                                    </div>
-                                </div>
-                                <div class="bg-white p-3 rounded-lg shadow-sm mb-3">
-                                    <div class="text-sm font-bold">Specialty Coffee</div>
-                                </div>
-                            </div>
+                        <div class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-64 h-[400px] border-4 border-gray-900 relative bg-black overflow-hidden">
+                            <!-- REPLACE src WITH YOUR IMAGE -->
+                            <img src="feature_1.png" alt="Feature 1 Screen" class="w-full h-full object-cover rounded-[2rem]">
+                            <!-- Fallback Label -->
+                            <div class="absolute inset-0 flex items-center justify-center text-white/50 text-xs pointer-events-none">feature_1.png</div>
                         </div>
                         <div class="mt-6 text-center">
                             <h3 class="font-bold text-lg">AI Personalization</h3>
                             <p class="text-sm text-gray-500">Smart curation.</p>
                         </div>
                     </div>
-                    <!-- Feature 2 (HERO) -->
+
+                    <!-- Feature 2 (HERO): IMAGE PLACEHOLDER -->
                     <div class="w-1/3 flex flex-col items-center -mt-8">
-                        <div class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-72 h-[550px] border-4 border-gray-900 relative bg-black overflow-hidden">
-                            <div class="bg-gray-900 w-full h-full rounded-[2rem] flex flex-col items-center justify-center relative">
-                                <div class="text-white text-xs absolute top-8">Wallet</div>
-                                <div class="w-56 h-36 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl shadow-lg border-t border-white/20 p-4 relative overflow-hidden">
-                                    <div class="absolute top-0 right-0 w-24 h-24 bg-white opacity-10 rounded-full -mr-10 -mt-10"></div>
-                                    <div class="flex justify-between items-start">
-                                        <span class="text-white font-bold tracking-widest">zyada</span>
-                                        <i class="fas fa-wifi text-white/50 rotate-90"></i>
-                                    </div>
-                                    <div class="mt-8">
-                                        <div class="text-blue-200 text-[10px] uppercase">Student Name</div>
-                                        <div class="text-white font-semibold">Ali Al-Kuwaiti</div>
-                                    </div>
-                                    <div class="absolute bottom-4 right-4 text-white text-xs bg-orange-500 px-2 py-0.5 rounded">Verified</div>
-                                </div>
-                                <div class="mt-8 text-white/80 text-center">
-                                    <i class="fas fa-check-circle text-4xl text-green-500 mb-2"></i>
-                                    <p class="font-medium">Hold Near Reader</p>
-                                </div>
-                            </div>
+                        <div class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-72 h-[450px] border-4 border-gray-900 relative bg-black overflow-hidden">
+                            <!-- REPLACE src WITH YOUR IMAGE -->
+                            <img src="feature_2.png" alt="Feature 2 Screen" class="w-full h-full object-cover rounded-[2rem]">
+                            <!-- Fallback Label -->
+                            <div class="absolute inset-0 flex items-center justify-center text-white/50 text-xs pointer-events-none">feature_2.png</div>
                         </div>
                         <div class="mt-6 text-center">
                             <h3 class="font-bold text-lg text-zyada-blue">Tap-to-Redeem</h3>
                             <p class="text-sm text-gray-500">NFC Wallet Integration.</p>
                         </div>
                     </div>
-                    <!-- Feature 3 -->
+
+                    <!-- Feature 3: IMAGE PLACEHOLDER -->
                     <div class="w-1/3 flex flex-col items-center">
-                        <div class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-64 h-[500px] border-4 border-gray-900 relative bg-white overflow-hidden">
-                             <div class="bg-gray-50 w-full h-full rounded-[2rem] p-6 flex flex-col items-center justify-center">
-                                <div class="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center text-zyada-orange text-3xl mb-4">
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="font-bold text-xl text-gray-800">+50 Points</h4>
-                                <p class="text-xs text-gray-500 text-center mt-2">You saved 2.500 KWD today!</p>
-                            </div>
+                        <div class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-64 h-[400px] border-4 border-gray-900 relative bg-black overflow-hidden">
+                             <!-- REPLACE src WITH YOUR IMAGE -->
+                             <img src="feature_3.png" alt="Feature 3 Screen" class="w-full h-full object-cover rounded-[2rem]">
+                             <!-- Fallback Label -->
+                             <div class="absolute inset-0 flex items-center justify-center text-white/50 text-xs pointer-events-none">feature_3.png</div>
                         </div>
                         <div class="mt-6 text-center">
                             <h3 class="font-bold text-lg">Loyalty Rewards</h3>
                             <p class="text-sm text-gray-500">Gamified progress loop.</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
 
-        <!-- SLIDE 6: EXPERIENCE PART 2 (Discovery & Featured) -->
+        <!-- SLIDE 6: BUSINESS MODEL -->
         <div class="slide" id="slide-6">
-            <div class="h-full flex">
-                <div class="w-1/2 p-16 flex flex-col justify-center space-y-12">
-                    <div>
-                        <h2 class="text-4xl font-bold text-gray-900 leading-tight">The Experience:<br>Discovery & Promotion</h2>
-                        <div class="w-20 h-1 bg-zyada-orange mt-4"></div>
-                    </div>
-                    
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="text-2xl font-bold text-zyada-blue mb-2">Smart Discovery</h3>
-                            <p class="text-gray-600 text-lg">
-                                Category bubbles and brand-focused lists allow students to browse intuitively. Whether they want <b>"Food"</b> or <b>"Fashion"</b>, the interface adapts to their lifestyle habits.
-                            </p>
-                        </div>
-                        
-                        <div class="bg-orange-50 p-6 rounded-lg border-l-4 border-zyada-orange">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Featured Listings</h3>
-                            <p class="text-gray-600 text-lg mb-2">
-                                <b class="text-zyada-orange">Additional Revenue Stream:</b>
-                            </p>
-                            <p class="text-gray-700">
-                                Brands pay for <b>"Top of Feed"</b> visibility. High-impact banners on the offer page drive immediate conversion and awareness for new partners.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="w-1/2 bg-gray-50 flex items-center justify-center gap-8 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-zyada-blue/5 z-0"></div>
-                    
-                    <!-- Phone 1: List View (LEFT) -->
-                    <div class="phone-frame w-64 h-[550px] z-10 transform translate-y-8 shadow-2xl">
-                        <div class="phone-notch"></div>
-                        <img src="app_left.png" alt="Student Discount UI - Left Phone">
-                        <!-- Fallback Text -->
-                        <div class="absolute inset-0 flex items-center justify-center text-xs text-gray-400 -z-10">app_left.png</div>
-                    </div>
-
-                    <!-- Phone 2: Featured Banner View (RIGHT) -->
-                    <div class="phone-frame w-64 h-[550px] z-10 transform -translate-y-8 shadow-2xl border-2 border-zyada-orange">
-                        <div class="phone-notch"></div>
-                        <img src="app_right.png" alt="Featured Offer UI - Right Phone">
-                        <!-- Fallback Text -->
-                        <div class="absolute inset-0 flex items-center justify-center text-xs text-gray-400 -z-10">app_right.png</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SLIDE 7: BUSINESS MODEL -->
-        <div class="slide" id="slide-7">
             <div class="h-full p-12 flex flex-col">
                 <div class="mb-10 text-center border-b pb-4">
                     <h2 class="text-4xl font-bold text-gray-900">Business Model</h2>
                     <p class="text-xl text-gray-500 mt-2">Hybrid B2B & B2C Strategy</p>
                 </div>
-                <div class="flex-grow flex items-center justify-center gap-8">
-                    <div class="w-1/3 bg-white border border-gray-200 rounded-2xl p-8 shadow-lg transition relative overflow-hidden group">
+                <div class="flex-grow flex items-center justify-center gap-16">
+                    <div class="w-5/12 bg-white border border-gray-200 rounded-2xl p-10 shadow-lg transition relative overflow-hidden group">
                         <div class="absolute top-0 left-0 w-full h-2 bg-zyada-blue"></div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Commission (CPA)</h3>
-                        <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-6">Primary Revenue</p>
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check text-green-500 mt-1"></i>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">Commission (CPA)</h3>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-8">Primary Revenue</p>
+                        <ul class="space-y-6 text-gray-700 text-lg">
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-check text-green-500 mt-1.5"></i>
                                 <span>We charge merchants <b>5% – 15%</b> on verified sales.</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check text-green-500 mt-1"></i>
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-check text-green-500 mt-1.5"></i>
                                 <span>Includes <b class="text-zyada-blue">Featured Listings</b> revenue for premium visibility.</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="w-1/3 bg-white border border-gray-200 rounded-2xl p-8 shadow-lg transition relative overflow-hidden group">
+                    <div class="w-5/12 bg-white border border-gray-200 rounded-2xl p-10 shadow-lg transition relative overflow-hidden group">
                         <div class="absolute top-0 left-0 w-full h-2 bg-zyada-orange"></div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Sector Packs</h3>
-                        <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-6">Subscription Revenue</p>
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check text-green-500 mt-1"></i>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">SaaS Revenue (Sector Packs)</h3>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-8">Subscription Revenue</p>
+                        <ul class="space-y-6 text-gray-700 text-lg">
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-check text-green-500 mt-1.5"></i>
                                 <span>Students pay to unlock "Super Discounts".</span>
                             </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check text-green-500 mt-1"></i>
+                            <li class="flex items-start gap-4">
+                                <i class="fas fa-check text-green-500 mt-1.5"></i>
                                 <span>Examples: <b>Coffee Pass</b>, <b>Salons Pack</b>.</span>
                             </li>
                         </ul>
-                    </div>
-                     <div class="w-1/4 bg-gray-50 rounded-2xl p-8 border border-dashed border-gray-300 flex flex-col items-center text-center opacity-70">
-                        <div class="text-4xl text-gray-400 mb-4">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <h3 class="font-bold text-gray-800">Students</h3>
-                        <div class="text-3xl font-bold text-zyada-blue my-2">FREE</div>
-                        <p class="text-xs text-gray-500">Core access is free.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- SLIDE 8: COMPETITORS -->
-        <div class="slide" id="slide-8">
+        <!-- SLIDE 7: COMPETITORS -->
+        <div class="slide" id="slide-7">
             <div class="h-full p-12 flex flex-col">
                 <h2 class="text-4xl font-bold text-gray-900 mb-8">Competitor Landscape</h2>
                 <div class="flex-grow relative bg-gray-50 rounded-xl p-8 border border-gray-200">
@@ -492,13 +443,17 @@
                     <div class="w-full h-full grid grid-cols-2 grid-rows-2 relative">
                         <div class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-gray-300"></div>
                         <div class="absolute left-0 right-0 top-1/2 h-0.5 bg-gray-300"></div>
+                        
                         <!-- Top Left -->
                         <div class="p-8 flex items-start justify-end">
-                            <div class="text-right opacity-60">
+                            <div class="text-right opacity-60 flex flex-col items-end">
+                                <!-- Place 'competitor_global.png' in the same folder -->
+                                <img src="competitor_global.png" alt="UNiDAYS" class="h-12 mb-2 object-contain grayscale opacity-70">
                                 <div class="font-bold text-gray-800">Global Apps</div>
                                 <div class="text-xs text-red-500">UNiDAYS (Unified + Online Only)</div>
                             </div>
                         </div>
+                        
                         <!-- Top Right (WINNER) -->
                         <div class="p-8 flex items-start justify-start bg-blue-50/50 rounded-tr-xl">
                             <div class="bg-white p-6 rounded-xl shadow-xl border-2 border-zyada-orange relative -mt-4 -ml-4 z-20">
@@ -511,16 +466,22 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <!-- Bottom Left -->
                         <div class="p-8 flex items-end justify-end">
-                            <div class="text-right opacity-60">
+                            <div class="text-right opacity-60 flex flex-col items-end">
+                                <!-- Place 'competitor_brand.png' in the same folder -->
+                                <img src="competitor_brand.png" alt="Starbucks" class="h-12 mb-2 object-contain grayscale opacity-70">
                                 <div class="font-bold text-gray-800">Single Brands</div>
                                 <div class="text-xs text-red-500">Starbucks App (Siloed)</div>
                             </div>
                         </div>
+                        
                         <!-- Bottom Right -->
                         <div class="p-8 flex items-end justify-start">
-                             <div class="text-left opacity-60">
+                             <div class="text-left opacity-60 flex flex-col items-start">
+                                <!-- Place 'competitor_bank.png' in the same folder -->
+                                <img src="competitor_bank.png" alt="NBK/KFH" class="h-12 mb-2 object-contain grayscale opacity-70">
                                 <div class="font-bold text-gray-800">Banks (NBK/KFH)</div>
                                 <div class="text-xs text-red-500">Fragmented + Omni-channel</div>
                             </div>
@@ -530,8 +491,8 @@
             </div>
         </div>
 
-        <!-- SLIDE 9: TRACTION -->
-        <div class="slide" id="slide-9">
+        <!-- SLIDE 8: TRACTION -->
+        <div class="slide" id="slide-8">
             <div class="h-full p-16 flex flex-col justify-center">
                 <h2 class="text-4xl font-bold text-gray-900 mb-16">Traction & Forecast</h2>
                 <div class="relative">
@@ -578,10 +539,11 @@
             </div>
         </div>
 
-        <!-- SLIDE 10: FINANCIALS -->
-        <div class="slide" id="slide-10">
-            <div class="h-full flex">
-                <div class="w-1/3 bg-gray-900 text-white p-12 flex flex-col justify-center">
+<!-- SLIDE 9: FINANCIALS (KEY TAKEAWAY VISUAL) -->
+        <div class="slide" id="slide-9">
+            <div class="h-full flex relative">
+                <!-- Left Panel: Context -->
+                <div class="w-1/3 bg-gray-900 text-white p-12 flex flex-col justify-center relative z-20 shadow-xl">
                     <h2 class="text-3xl font-bold text-white mb-6">The "Stipend Economy"</h2>
                     <div class="space-y-6">
                         <div>
@@ -593,100 +555,99 @@
                         <div class="h-px bg-gray-700 w-full"></div>
                         <p class="text-gray-300 italic">"This cash enters the market every month regardless of employment status."</p>
                     </div>
+                    <!-- Footnote -->
+                    <div class="absolute bottom-8 left-12 text-[10px] text-gray-500 w-64 leading-tight">
+                        Source: Aggregated enrollment data from Kuwait University (KU), PAAET, and Ministry of Higher Education (MOHE) Annual Reports (2023/2024).
+                    </div>
                 </div>
-                <div class="w-2/3 p-12 bg-gray-50 overflow-y-auto">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Revenue Forecast (Bottom-Up)</h3>
-                    <div class="bg-white rounded-lg shadow border border-gray-200 overflow-hidden text-sm">
-                        <table class="w-full text-left">
-                            <thead class="bg-gray-100 text-gray-600 uppercase text-xs">
-                                <tr>
-                                    <th class="p-3">Sector</th>
-                                    <th class="p-3 bg-yellow-50 text-yellow-800 border-l border-r border-yellow-100">Std Mkt Comm %</th>
-                                    <th class="p-3">Active User %</th>
-                                    <th class="p-3">Avg Spend (KWD)</th>
-                                    <th class="p-3">Rev @ 20k Users</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-100">
-                                <tr>
-                                    <td class="p-3 font-bold">1. Food & Cafés</td>
-                                    <td class="p-3 text-center text-gray-500 bg-yellow-50/50 border-l border-r border-yellow-50">5% - 10%</td>
-                                    <td class="p-3">85%</td>
-                                    <td class="p-3">40.00</td>
-                                    <td class="p-3 text-right">47,600</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-3 font-bold">2. Fashion</td>
-                                    <td class="p-3 text-center text-gray-500 bg-yellow-50/50 border-l border-r border-yellow-50">10% - 15%</td>
-                                    <td class="p-3">45%</td>
-                                    <td class="p-3">22.40</td>
-                                    <td class="p-3 text-right">25,200</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-3 font-bold">3. Travel</td>
-                                    <td class="p-3 text-center text-gray-500 bg-yellow-50/50 border-l border-r border-yellow-50">3% - 8%</td>
-                                    <td class="p-3">15%</td>
-                                    <td class="p-3">109.00</td>
-                                    <td class="p-3 text-right">18,000</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-3 font-bold">4. Wellness & Grooming</td>
-                                    <td class="p-3 text-center text-gray-500 bg-yellow-50/50 border-l border-r border-yellow-50">10% - 20%</td>
-                                    <td class="p-3">30%</td>
-                                    <td class="p-3">15.00</td>
-                                    <td class="p-3 text-right">13,500</td>
-                                </tr>
-                                <tr>
-                                    <td class="p-3 font-bold">5. Electronics</td>
-                                    <td class="p-3 text-center text-gray-500 bg-yellow-50/50 border-l border-r border-yellow-50">3% - 5%</td>
-                                    <td class="p-3">20%</td>
-                                    <td class="p-3">100.00</td>
-                                    <td class="p-3 text-right">8,000</td>
-                                </tr>
-                            </tbody>
-                            <tfoot class="bg-blue-50">
-                                <tr>
-                                    <td colspan="4" class="p-4 font-bold text-gray-900 text-lg">TOTAL MONTHLY REVENUE</td>
-                                    <td class="p-4 font-bold text-zyada-blue text-lg text-right">~186,400 KWD</td>
-                                </tr>
-                            </tfoot>
-                        </table>
+
+                <!-- Right Panel: Visual Overlay -->
+                <div class="w-2/3 bg-gray-50 relative overflow-hidden">
+                    
+                    <!-- 1. THE DATA (Blurred Background) -->
+                    <div class="absolute inset-0 p-12 opacity-30 filter blur-[2px] select-none pointer-events-none transform scale-95">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Revenue Forecast (Bottom-Up)</h3>
+                        <div class="bg-white rounded-lg border border-gray-300 overflow-hidden text-sm">
+                            <table class="w-full text-left">
+                                <thead class="bg-gray-100 text-gray-400 uppercase text-xs">
+                                    <tr><th class="p-3">Sector</th><th class="p-3">Comm %</th><th class="p-3">Rev</th></tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100 text-gray-400">
+                                    <tr><td class="p-3">Food & Cafés</td><td class="p-3">5% - 10%</td><td class="p-3">47,600</td></tr>
+                                    <tr><td class="p-3">Fashion</td><td class="p-3">10% - 15%</td><td class="p-3">25,200</td></tr>
+                                    <tr><td class="p-3">Travel</td><td class="p-3">3% - 8%</td><td class="p-3">18,000</td></tr>
+                                    <tr><td class="p-3">Wellness</td><td class="p-3">10% - 20%</td><td class="p-3">13,500</td></tr>
+                                    <tr><td class="p-3">Electronics</td><td class="p-3">3% - 5%</td><td class="p-3">8,000</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="mt-8 bg-orange-50 p-4 rounded border-l-4 border-zyada-orange">
-                        <p class="text-gray-800 font-bold">Projected Scale (50k Users): <span class="text-2xl ml-2">~466,000 KWD / Month</span></p>
-                        <p class="text-xs text-gray-600 mt-1">*Excludes upside from B2C Subscription Sales.</p>
+
+                    <!-- 2. THE KEY TAKEAWAY (Foreground Card) -->
+                    <div class="absolute inset-0 flex items-center justify-center z-10">
+                        <div class="bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 max-w-md w-full text-center relative overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                            <!-- Decor element -->
+                            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-zyada-blue to-zyada-orange"></div>
+                            
+                            <div class="mb-2 text-gray-500 font-bold uppercase tracking-widest text-xs">Year 1 Projection</div>
+                            
+                            <h3 class="text-5xl font-extrabold text-gray-900 mb-1">
+                                <span class="text-3xl align-top text-gray-400 font-normal">KWD</span> 186,400
+                            </h3>
+                            <div class="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full inline-block mb-6">
+                                Monthly Recurring Revenue
+                            </div>
+
+                            <div class="space-y-4 text-left border-t border-gray-100 pt-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-zyada-blue text-lg">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-gray-900">20,000 Active Users</div>
+                                        <div class="text-xs text-gray-500">Conservative 15% Market Penetration</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-zyada-orange text-lg">
+                                        <i class="fas fa-percentage"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-gray-900">5% - 15% Commission</div>
+                                        <div class="text-xs text-gray-500">Standard Affiliate Market Rates</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
-
-        <!-- SLIDE 11: TEAM -->
-        <div class="slide" id="slide-11">
+        <!-- SLIDE 10: TEAM (UPDATED WITH IMAGES) -->
+        <div class="slide" id="slide-10">
             <div class="h-full p-12 flex flex-col items-center justify-center">
                 <h2 class="text-4xl font-bold text-gray-900 mb-12">The Team</h2>
                 <div class="flex gap-16">
                     <!-- Hassan -->
                     <div class="text-center group">
-                        <div class="w-64 h-64 mx-auto mb-6 shadow-xl relative rounded-3xl overflow-hidden border-4 border-zyada-blue">
-                            <!-- LOCAL IMAGE: hassan.png -->
-                            <img src="hassan.png" alt="Hassan" class="w-full h-full object-cover">
-                            <!-- Fallback Text -->
-                            <div class="absolute inset-0 flex items-center justify-center text-xs text-gray-400 -z-10 bg-gray-200">hassan.png</div>
+                        <div class="w-64 h-64 mx-auto mb-6 shadow-xl relative rounded-3xl overflow-hidden border-4 border-zyada-blue group-hover:scale-105 transition-transform duration-300">
+                            <!-- Ensure file is named 'hassan.png' -->
+                            <img src="hassan.png" alt="Hassan Al-Shammasi" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900">Hassan Al-Shammasi</h3>
                         <p class="text-zyada-orange font-bold uppercase tracking-wider text-sm mt-1">Founder</p>
                         <div class="mt-4 max-w-xs mx-auto text-gray-600 text-sm">
-                            <p>"Skin in the game." Building secure, enterprise-grade architecture.</p>
+                            <p class="font-bold text-zyada-blue mb-1">Business management + Software engineering</p>
+                            <p>Strategic direction and partnership acquisitions expert.</p>
                         </div>
                     </div>
 
                     <!-- Adam (CTO) -->
                     <div class="text-center group">
-                        <div class="w-64 h-64 mx-auto mb-6 shadow-xl relative rounded-3xl overflow-hidden border-4 border-gray-300">
-                            <!-- LOCAL IMAGE: adam.png -->
-                            <img src="adam.png" alt="Adam" class="w-full h-full object-cover">
-                            <!-- Fallback Text -->
-                            <div class="absolute inset-0 flex items-center justify-center text-xs text-gray-400 -z-10 bg-gray-200">adam.png</div>
+                        <div class="w-64 h-64 mx-auto mb-6 shadow-xl relative rounded-3xl overflow-hidden border-4 border-gray-300 group-hover:scale-105 transition-transform duration-300">
+                             <!-- Ensure file is named 'adam.png' -->
+                             <img src="adam.png" alt="Adam Mehina" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900">Adam Mehina</h3>
                         <p class="text-gray-500 font-bold uppercase tracking-wider text-sm mt-1">Chief Technology Officer</p>
@@ -699,22 +660,34 @@
             </div>
         </div>
 
-        <!-- SLIDE 12: THE ASK -->
-        <div class="slide" id="slide-12">
+        <!-- SLIDE 11: THE ASK -->
+        <div class="slide" id="slide-11">
             <div class="h-full flex">
                 <div class="w-1/2 bg-zyada-blue text-white p-16 flex flex-col justify-center">
                     <h2 class="text-5xl font-bold mb-4">The Ask</h2>
                     <p class="text-xl opacity-90 mb-12">Financing the 9-month sprint from Concept to MVP Launch.</p>
                     <div class="text-7xl font-bold text-zyada-orange mb-2">25,000</div>
                     <div class="text-2xl font-light uppercase tracking-widest mb-8">KWD Pre-Seed</div>
+                    
+                    <!-- NEW DELIVERABLES BOX -->
                     <div class="bg-white/10 p-6 rounded-lg backdrop-blur-sm border border-white/20">
-                        <h4 class="font-bold mb-2">The Milestone:</h4>
-                        <ul class="space-y-2 text-sm">
-                            <li><i class="fas fa-check text-green-400 mr-2"></i> Fully Functional MVP (iOS/Android)</li>
-                            <li><i class="fas fa-check text-green-400 mr-2"></i> 5,000 Verified Users</li>
-                            <li><i class="fas fa-check text-green-400 mr-2"></i> 50+ Brand Partners</li>
-                        </ul>
+                        <h4 class="font-bold mb-4 text-orange-300 uppercase tracking-widest text-xs">The Deliverables (9 Months)</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between border-b border-white/10 pb-2">
+                                <span>Development</span>
+                                <span class="font-bold">MVP (iOS/Android)</span>
+                            </div>
+                            <div class="flex items-center justify-between border-b border-white/10 pb-2">
+                                <span>Traction</span>
+                                <span class="font-bold">5,000 Verified Users</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span>Partnerships</span>
+                                <span class="font-bold">50+ Brands Onboarded</span>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
                 <div class="w-1/2 p-16 bg-white flex flex-col justify-center items-center">
                     <h3 class="text-xl font-bold text-gray-800 mb-8 uppercase tracking-wider">Use of Funds</h3>
@@ -742,13 +715,12 @@
             </div>
         </div>
 
-        <!-- SLIDE 13: FINAL -->
-        <div class="slide" id="slide-13">
+        <!-- SLIDE 12: FINAL -->
+        <div class="slide" id="slide-12">
             <div class="w-full h-full flex flex-col items-center justify-center bg-white text-gray-900 relative">
                  <div class="mb-12">
-                    <div class="bg-zyada-blue px-16 py-8 rounded-xl shadow-2xl relative">
-                        <img src="zyada_logo.png" alt="Zyada Logo" class="h-40 w-auto object-contain">
-                         <p class="text-xs mt-2 text-white/50 absolute -bottom-6 left-0 right-0 text-center">"zyada_logo.png"</p>
+                    <div class="h-40 w-40 bg-zyada-blue rounded-xl shadow-2xl flex items-center justify-center text-4xl text-white font-bold tracking-tighter">
+                        zyada.
                     </div>
                 </div>
                 <div class="text-center space-y-2 mb-12">
@@ -776,7 +748,7 @@
 
     <script>
         let currentSlide = 1;
-        const totalSlides = 13;
+        const totalSlides = 12;
 
         function updateSlide() {
             // Remove 'active' class from all slides
@@ -827,5 +799,4 @@
         });
     </script>
 </body>
-
 </html>
