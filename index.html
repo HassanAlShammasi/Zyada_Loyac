@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,34 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        
+
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #000000; /* Darker outer background */
+            background-color: #000000;
+            /* Darker outer background */
             overflow: hidden;
             margin: 0;
             padding: 0;
         }
 
         /* Zyada Brand Colors */
-        .bg-zyada-blue { background-color: #0044cc; }
-        .text-zyada-blue { color: #3b82f6; } /* Lighter blue for dark mode readability */
-        .bg-zyada-orange { background-color: #ff6600; }
-        .text-zyada-orange { color: #ff6600; }
-        
+        .bg-zyada-blue {
+            background-color: #0044cc;
+        }
+
+        .text-zyada-blue {
+            color: #3b82f6;
+        }
+
+        /* Lighter blue for dark mode readability */
+        .bg-zyada-orange {
+            background-color: #ff6600;
+        }
+
+        .text-zyada-orange {
+            color: #ff6600;
+        }
+
         .slide-container {
             width: 100vw;
             height: 100vh;
@@ -35,7 +49,8 @@
         .slide {
             width: 1280px;
             height: 720px;
-            background: #111827; /* Dark Gray Background for Slides */
+            background: #111827;
+            /* Dark Gray Background for Slides */
             color: #ffffff;
             position: absolute;
             top: 50%;
@@ -44,7 +59,8 @@
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
             pointer-events: none;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8); /* Darker shadow */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+            /* Darker shadow */
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -59,7 +75,8 @@
 
         /* Phone Frame CSS */
         .phone-frame {
-            border: 12px solid #374151; /* Lighter gray border for phone */
+            border: 12px solid #374151;
+            /* Lighter gray border for phone */
             border-radius: 40px;
             overflow: hidden;
             position: relative;
@@ -67,7 +84,7 @@
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             aspect-ratio: 9/19.5;
         }
-        
+
         .phone-frame img {
             width: 100%;
             height: 100%;
@@ -103,7 +120,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
         }
-        
+
         .btn-nav {
             width: 3rem;
             height: 3rem;
@@ -114,12 +131,13 @@
             cursor: pointer;
             transition: transform 0.1s ease;
         }
-        
+
         .btn-nav:active {
             transform: scale(0.95);
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation Controls -->
@@ -130,7 +148,8 @@
         <div id="slide-counter" class="flex items-center justify-center text-white font-bold w-16 select-none">
             1 / 12
         </div>
-        <button onclick="nextSlide()" class="btn-nav bg-zyada-orange hover:bg-orange-600 text-white border border-orange-500">
+        <button onclick="nextSlide()"
+            class="btn-nav bg-zyada-orange hover:bg-orange-600 text-white border border-orange-500">
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>
@@ -139,14 +158,20 @@
 
         <!-- SLIDE 1: TITLE -->
         <div class="slide active" id="slide-1">
-            <div class="w-full h-full flex flex-col items-center justify-center bg-zyada-blue text-white relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-96 h-96 bg-zyada-orange opacity-20 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-                <div class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+            <div
+                class="w-full h-full flex flex-col items-center justify-center bg-zyada-blue text-white relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-96 h-96 bg-zyada-orange opacity-20 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2">
+                </div>
                 <div class="z-10 text-center">
                     <div class="mb-8 relative inline-block">
                         <img src="logo.png" alt="Zyada Logo" class="h-48 w-auto object-contain drop-shadow-2xl">
                     </div>
-                    <h2 class="text-3xl font-light tracking-wide mb-4">The Region’s First Unified Student Lifestyle Platform.</h2>
+                    <h2 class="text-3xl font-light tracking-wide mb-4">The Region’s First Unified Student Lifestyle
+                        Platform.</h2>
                     <div class="w-24 h-1 bg-zyada-orange mx-auto my-6"></div>
                     <p class="text-xl font-bold italic tracking-wider">"More Life. Less Spending."</p>
                 </div>
@@ -158,12 +183,15 @@
             <div class="flex h-full">
                 <!-- Left: Visual Emotion -->
                 <div class="w-5/12 bg-black relative overflow-hidden flex items-center justify-center">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-90"></div>
-                    <img src="https://images.unsplash.com/photo-1534330207526-9e4e75c2059f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Stressed Student" 
-                         class="object-cover w-full h-full opacity-50 grayscale">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-90">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1534330207526-9e4e75c2059f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Stressed Student" class="object-cover w-full h-full opacity-50 grayscale">
                     <div class="absolute bottom-12 left-10 z-20">
-                        <div class="bg-red-600 text-white px-3 py-1 font-bold text-xs uppercase tracking-widest inline-block mb-3 rounded-sm">The Pain</div>
+                        <div
+                            class="bg-red-600 text-white px-3 py-1 font-bold text-xs uppercase tracking-widest inline-block mb-3 rounded-sm">
+                            The Pain</div>
                         <h2 class="text-5xl font-bold text-white leading-none">The Student<br>Budget<br>Crisis.</h2>
                     </div>
                 </div>
@@ -171,41 +199,44 @@
                 <!-- Right: The Narrative -->
                 <div class="w-7/12 p-16 flex flex-col justify-center bg-gray-900">
                     <div class="space-y-10">
-                        
+
                         <!-- The Persona -->
                         <div class="relative pl-6 border-l-4 border-zyada-orange">
                             <h3 class="text-gray-400 font-bold uppercase tracking-wider text-xs mb-2">The Persona</h3>
                             <p class="text-2xl text-gray-200 font-light italic leading-snug">
-                                "Meet Ali. The cost of <span class="font-bold text-white">existing</span> just ate up his budget for <span class="font-bold text-zyada-orange">living</span>."
+                                "Meet Ali. The cost of <span class="font-bold text-white">existing</span> just ate up
+                                his budget for <span class="font-bold text-zyada-orange">living</span>."
                             </p>
                         </div>
 
                         <!-- The Market Failure -->
                         <div class="bg-gray-800 rounded-2xl p-8 border border-gray-700 shadow-lg">
                             <div class="flex items-center gap-4 mb-4">
-                                <div class="w-10 h-10 bg-blue-900/50 rounded-full flex items-center justify-center text-blue-400">
+                                <div
+                                    class="w-10 h-10 bg-blue-900/50 rounded-full flex items-center justify-center text-blue-400">
                                     <i class="fas fa-search-dollar"></i>
                                 </div>
                                 <h3 class="text-lg font-bold text-white">The Market Failure</h3>
                             </div>
                             <p class="text-gray-300 text-lg mb-4">
-                                Great offers are <span class="text-red-400 font-bold">locked away</span> or impossible to find.
+                                Great offers are <span class="text-red-400 font-bold">locked away</span> or impossible
+                                to find.
                             </p>
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="flex items-start gap-2 text-sm text-gray-400">
-                                    <i class="fas fa-lock text-red-500 mt-1"></i> 
+                                    <i class="fas fa-lock text-red-500 mt-1"></i>
                                     <span><b>Exclusive to Specific Banks</b> (NBK, KFH)</span>
                                 </div>
                                 <div class="flex items-start gap-2 text-sm text-gray-400">
-                                    <i class="fas fa-layer-group text-red-500 mt-1"></i> 
+                                    <i class="fas fa-layer-group text-red-500 mt-1"></i>
                                     <span><b>App Overload:</b> "One app for each store"</span>
                                 </div>
                                 <div class="flex items-start gap-2 text-sm text-gray-400">
-                                    <i class="fas fa-qrcode text-red-500 mt-1"></i> 
+                                    <i class="fas fa-qrcode text-red-500 mt-1"></i>
                                     <span>Messy Barcodes</span>
                                 </div>
                                 <div class="flex items-start gap-2 text-sm text-gray-400">
-                                    <i class="fas fa-id-card text-red-500 mt-1"></i> 
+                                    <i class="fas fa-id-card text-red-500 mt-1"></i>
                                     <span>Forgotten Student IDs</span>
                                 </div>
                             </div>
@@ -238,32 +269,40 @@
                 </div>
                 <div class="flex-grow flex items-center justify-center gap-16">
                     <div class="relative w-[500px] h-[500px] flex items-center justify-center">
-                        <div class="absolute w-full h-full rounded-full bg-blue-900/20 border-2 border-blue-800 flex items-start justify-center pt-8 shadow-sm">
+                        <div
+                            class="absolute w-full h-full rounded-full bg-blue-900/20 border-2 border-blue-800 flex items-start justify-center pt-8 shadow-sm">
                             <span class="font-bold text-blue-300 mt-2">TAM MENA: 15M+</span>
                         </div>
-                        <div class="absolute w-[350px] h-[350px] rounded-full bg-blue-800/30 border-2 border-blue-500 flex items-start justify-center pt-8 shadow-md">
+                        <div
+                            class="absolute w-[350px] h-[350px] rounded-full bg-blue-800/30 border-2 border-blue-500 flex items-start justify-center pt-8 shadow-md">
                             <span class="font-bold text-blue-200 mt-2">TAM GCC: 2.5M</span>
                         </div>
-                        <div class="absolute w-[200px] h-[200px] rounded-full bg-zyada-blue border-4 border-gray-800 flex items-center justify-center shadow-xl text-center p-4">
+                        <div
+                            class="absolute w-[200px] h-[200px] rounded-full bg-zyada-blue border-4 border-gray-800 flex items-center justify-center shadow-xl text-center p-4">
                             <div>
                                 <span class="block text-white font-bold text-2xl">135k</span>
                                 <span class="block text-blue-200 text-xs uppercase tracking-wider">Kuwait TAM</span>
                             </div>
                         </div>
                         <div class="absolute top-1/2 left-1/2 ml-[100px] -mt-[60px]">
-                            <div class="bg-zyada-orange text-white text-xs font-bold px-3 py-1 rounded shadow-lg transform rotate-12">Beachhead Market</div>
+                            <div
+                                class="bg-zyada-orange text-white text-xs font-bold px-3 py-1 rounded shadow-lg transform rotate-12">
+                                Beachhead Market</div>
                         </div>
                     </div>
                     <div class="w-1/2 space-y-6">
                         <div class="bg-gray-800 p-6 rounded-lg border-l-4 border-blue-500">
                             <h4 class="text-lg font-bold text-white">TAM (MENA) ~ 15,000,000 Students</h4>
-                            <p class="text-sm text-gray-400">The "Blue Ocean": Massive scale across Egypt, Saudi, and North Africa.</p>
+                            <p class="text-sm text-gray-400">The "Blue Ocean": Massive scale across Egypt, Saudi, and
+                                North Africa.</p>
                         </div>
                         <div class="bg-gray-800 p-6 rounded-lg border-l-4 border-zyada-blue">
                             <h4 class="text-lg font-bold text-white">TAM (GCC) ~ 2,500,000 Students</h4>
-                            <p class="text-sm text-gray-400">The "Expansion Market": High disposable income. <b>Saudi Arabia</b> represents a 10x growth opportunity.</p>
+                            <p class="text-sm text-gray-400">The "Expansion Market": High disposable income. <b>Saudi
+                                    Arabia</b> represents a 10x growth opportunity.</p>
                         </div>
-                        <div class="bg-gray-800 p-6 rounded-lg border-l-4 border-zyada-orange shadow-lg ring-1 ring-gray-700">
+                        <div
+                            class="bg-gray-800 p-6 rounded-lg border-l-4 border-zyada-orange shadow-lg ring-1 ring-gray-700">
                             <h4 class="text-xl font-bold text-white">TAM (Kuwait) ~ 135,000 Students</h4>
                             <p class="text-sm text-gray-400 mb-2">Our immediate launchpad (Public & Private).</p>
                             <div class="flex gap-4 mt-3 text-sm">
@@ -292,30 +331,38 @@
                 <div class="w-5/12 bg-zyada-blue p-12 flex flex-col justify-center text-white">
                     <h2 class="text-5xl font-bold mb-8">The Solution</h2>
                     <p class="text-2xl font-light leading-relaxed opacity-90 mb-8">
-                        The region’s first unified digital wallet that aggregates offers from banks, brands, and local spots into one ecosystem.
+                        The region’s first unified digital wallet that aggregates offers from banks, brands, and local
+                        spots into one ecosystem.
                     </p>
                 </div>
                 <div class="w-7/12 p-16 flex flex-col justify-center bg-gray-900">
                     <div class="grid grid-cols-1 gap-8">
                         <div class="flex items-start gap-6">
-                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center shadow-md text-zyada-orange text-2xl shrink-0 border border-gray-700">
+                            <div
+                                class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center shadow-md text-zyada-orange text-2xl shrink-0 border border-gray-700">
                                 <i class="fas fa-mobile-alt"></i>
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-white">Frictionless Redemption</h3>
-                                <p class="text-gray-400 mt-2">We replace paper IDs and fragmented QR codes with a seamless <span class="font-bold text-blue-400">"Tap-to-Redeem"</span> NFC experience.</p>
+                                <p class="text-gray-400 mt-2">We replace paper IDs and fragmented QR codes with a
+                                    seamless <span class="font-bold text-blue-400">"Tap-to-Redeem"</span> NFC
+                                    experience.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-6">
-                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center shadow-md text-zyada-orange text-2xl shrink-0 border border-gray-700">
+                            <div
+                                class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center shadow-md text-zyada-orange text-2xl shrink-0 border border-gray-700">
                                 <i class="fas fa-heart"></i>
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-white">Social Value</h3>
-                                <p class="text-gray-400 mt-2">We empower students to pursue their passions by lowering financial barriers, while driving <span class="font-bold text-blue-400">guaranteed, trackable footfall</span> to local SMEs.</p>
+                                <p class="text-gray-400 mt-2">We empower students to pursue their passions by lowering
+                                    financial barriers, while driving <span class="font-bold text-blue-400">guaranteed,
+                                        trackable footfall</span> to local SMEs.</p>
                             </div>
                         </div>
-                        <div class="mt-8 bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-sm flex items-center justify-between">
+                        <div
+                            class="mt-8 bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-sm flex items-center justify-between">
                             <div class="text-center w-1/3 opacity-40 text-gray-300">
                                 <i class="fas fa-id-card text-4xl mb-2"></i>
                                 <p class="text-xs">Messy IDs</p>
@@ -324,7 +371,8 @@
                                 <i class="fas fa-arrow-right"></i>
                             </div>
                             <div class="text-center w-1/3">
-                                <div class="w-16 h-16 bg-zyada-orange text-white rounded-full flex items-center justify-center mx-auto mb-2 text-2xl shadow-lg">
+                                <div
+                                    class="w-16 h-16 bg-zyada-orange text-white rounded-full flex items-center justify-center mx-auto mb-2 text-2xl shadow-lg">
                                     <i class="fas fa-wifi"></i>
                                 </div>
                                 <p class="text-sm font-bold text-white">One Tap</p>
@@ -343,11 +391,13 @@
                     <p class="text-gray-400 mt-2">Seamless integration into Ali's digital life.</p>
                 </div>
                 <div class="flex items-end justify-center gap-12 w-full h-full pb-8">
-                    
+
                     <!-- Feature 1 -->
                     <div class="w-1/3 flex flex-col items-center">
-                        <div class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-64 h-[400px] border-4 border-gray-700 relative bg-black overflow-hidden">
-                            <img src="feature_1.png" alt="Feature 1 Screen" class="w-full h-full object-cover rounded-[2rem]">
+                        <div
+                            class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-64 h-[400px] border-4 border-gray-700 relative bg-black overflow-hidden">
+                            <img src="feature_1.png" alt="Feature 1 Screen"
+                                class="w-full h-full object-cover rounded-[2rem]">
                         </div>
                         <div class="mt-6 text-center">
                             <h3 class="font-bold text-lg text-white">AI Personalization</h3>
@@ -357,8 +407,10 @@
 
                     <!-- Feature 2 (HERO) -->
                     <div class="w-1/3 flex flex-col items-center -mt-8">
-                        <div class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-72 h-[450px] border-4 border-gray-700 relative bg-black overflow-hidden">
-                            <img src="feature_2.png" alt="Feature 2 Screen" class="w-full h-full object-cover rounded-[2rem]">
+                        <div
+                            class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-72 h-[450px] border-4 border-gray-700 relative bg-black overflow-hidden">
+                            <img src="feature_2.png" alt="Feature 2 Screen"
+                                class="w-full h-full object-cover rounded-[2rem]">
                         </div>
                         <div class="mt-6 text-center">
                             <h3 class="font-bold text-lg text-zyada-blue">Tap-to-Redeem</h3>
@@ -368,8 +420,10 @@
 
                     <!-- Feature 3 -->
                     <div class="w-1/3 flex flex-col items-center">
-                        <div class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-64 h-[400px] border-4 border-gray-700 relative bg-black overflow-hidden">
-                             <img src="feature_3.png" alt="Feature 3 Screen" class="w-full h-full object-cover rounded-[2rem]">
+                        <div
+                            class="bg-gray-800 rounded-[2.5rem] p-3 shadow-2xl w-64 h-[400px] border-4 border-gray-700 relative bg-black overflow-hidden">
+                            <img src="feature_3.png" alt="Feature 3 Screen"
+                                class="w-full h-full object-cover rounded-[2rem]">
                         </div>
                         <div class="mt-6 text-center">
                             <h3 class="font-bold text-lg text-white">Loyalty Rewards</h3>
@@ -389,10 +443,12 @@
                     <p class="text-xl text-gray-400 mt-2">Hybrid B2B & B2C Strategy</p>
                 </div>
                 <div class="flex-grow flex items-center justify-center gap-16">
-                    <div class="w-5/12 bg-gray-800 border border-gray-700 rounded-2xl p-10 shadow-lg transition relative overflow-hidden group">
+                    <div
+                        class="w-5/12 bg-gray-800 border border-gray-700 rounded-2xl p-10 shadow-lg transition relative overflow-hidden group">
                         <div class="absolute top-0 left-0 w-full h-2 bg-zyada-blue"></div>
                         <h3 class="text-3xl font-bold text-white mb-2">Commission (CPA)</h3>
-                        <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-8">Primary Revenue</p>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-8">Primary Revenue
+                        </p>
                         <ul class="space-y-6 text-gray-300 text-lg">
                             <li class="flex items-start gap-4">
                                 <i class="fas fa-check text-green-500 mt-1.5"></i>
@@ -400,14 +456,17 @@
                             </li>
                             <li class="flex items-start gap-4">
                                 <i class="fas fa-check text-green-500 mt-1.5"></i>
-                                <span>Includes <b class="text-blue-400">Featured Listings</b> revenue for premium visibility.</span>
+                                <span>Includes <b class="text-blue-400">Featured Listings</b> revenue for premium
+                                    visibility.</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="w-5/12 bg-gray-800 border border-gray-700 rounded-2xl p-10 shadow-lg transition relative overflow-hidden group">
+                    <div
+                        class="w-5/12 bg-gray-800 border border-gray-700 rounded-2xl p-10 shadow-lg transition relative overflow-hidden group">
                         <div class="absolute top-0 left-0 w-full h-2 bg-zyada-orange"></div>
                         <h3 class="text-3xl font-bold text-white mb-2">SaaS Revenue (Sector Packs)</h3>
-                        <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-8">Subscription Revenue</p>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest font-semibold mb-8">Subscription
+                            Revenue</p>
                         <ul class="space-y-6 text-gray-300 text-lg">
                             <li class="flex items-start gap-4">
                                 <i class="fas fa-check text-green-500 mt-1.5"></i>
@@ -428,26 +487,36 @@
             <div class="h-full p-12 flex flex-col bg-gray-900">
                 <h2 class="text-4xl font-bold text-white mb-8">Competitor Landscape</h2>
                 <div class="flex-grow relative bg-gray-800 rounded-xl p-8 border border-gray-700">
-                    <div class="absolute top-4 left-1/2 transform -translate-x-1/2 font-bold text-gray-900 bg-white px-2 py-1 rounded shadow-sm z-10">UNIFIED ECOSYSTEM</div>
-                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 font-bold text-gray-900 bg-white px-2 py-1 rounded shadow-sm z-10">FRAGMENTED EXPERIENCE</div>
-                    <div class="absolute left-4 top-1/2 transform -translate-y-1/2 -rotate-90 font-bold text-gray-900 bg-white px-2 py-1 rounded shadow-sm z-10">ONLINE ONLY</div>
-                    <div class="absolute right-4 top-1/2 transform -translate-y-1/2 rotate-90 font-bold text-gray-900 bg-white px-2 py-1 rounded shadow-sm z-10">OMNI-CHANNEL</div>
+                    <div
+                        class="absolute top-4 left-1/2 transform -translate-x-1/2 font-bold text-gray-900 bg-white px-2 py-1 rounded shadow-sm z-10">
+                        UNIFIED ECOSYSTEM</div>
+                    <div
+                        class="absolute bottom-4 left-1/2 transform -translate-x-1/2 font-bold text-gray-900 bg-white px-2 py-1 rounded shadow-sm z-10">
+                        FRAGMENTED EXPERIENCE</div>
+                    <div
+                        class="absolute left-4 top-1/2 transform -translate-y-1/2 -rotate-90 font-bold text-gray-900 bg-white px-2 py-1 rounded shadow-sm z-10">
+                        ONLINE ONLY</div>
+                    <div
+                        class="absolute right-4 top-1/2 transform -translate-y-1/2 rotate-90 font-bold text-gray-900 bg-white px-2 py-1 rounded shadow-sm z-10">
+                        OMNI-CHANNEL</div>
                     <div class="w-full h-full grid grid-cols-2 grid-rows-2 relative">
                         <div class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-gray-600"></div>
                         <div class="absolute left-0 right-0 top-1/2 h-0.5 bg-gray-600"></div>
-                        
+
                         <!-- Top Left -->
                         <div class="p-8 flex items-start justify-end">
                             <div class="text-right opacity-60 flex flex-col items-end">
-                                <img src="competitor_global.png" alt="UNiDAYS" class="h-12 mb-2 object-contain grayscale opacity-70 invert">
+                                <img src="competitor_global.png" alt="UNiDAYS"
+                                    class="h-12 mb-2 object-contain grayscale opacity-70 invert">
                                 <div class="font-bold text-gray-300">Global Apps</div>
                                 <div class="text-xs text-red-400">UNiDAYS (Unified + Online Only)</div>
                             </div>
                         </div>
-                        
+
                         <!-- Top Right (WINNER) -->
                         <div class="p-8 flex items-start justify-start bg-blue-900/20 rounded-tr-xl">
-                            <div class="bg-gray-800 p-6 rounded-xl shadow-xl border-2 border-zyada-orange relative -mt-4 -ml-4 z-20">
+                            <div
+                                class="bg-gray-800 p-6 rounded-xl shadow-xl border-2 border-zyada-orange relative -mt-4 -ml-4 z-20">
                                 <div class="text-3xl font-extrabold text-white">zyada.</div>
                                 <div class="text-xs font-bold text-zyada-orange mt-1">
                                     <i class="fas fa-check mr-1"></i> NFC Offline
@@ -457,20 +526,22 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Bottom Left -->
                         <div class="p-8 flex items-end justify-end">
                             <div class="text-right opacity-60 flex flex-col items-end">
-                                <img src="competitor_brand.png" alt="Starbucks" class="h-12 mb-2 object-contain grayscale opacity-70 invert">
+                                <img src="competitor_brand.png" alt="Starbucks"
+                                    class="h-12 mb-2 object-contain grayscale opacity-70 invert">
                                 <div class="font-bold text-gray-300">Single Brands</div>
                                 <div class="text-xs text-red-400">Starbucks App (Siloed)</div>
                             </div>
                         </div>
-                        
+
                         <!-- Bottom Right -->
                         <div class="p-8 flex items-end justify-start">
-                             <div class="text-left opacity-60 flex flex-col items-start">
-                                <img src="competitor_bank.png" alt="NBK/KFH" class="h-12 mb-2 object-contain grayscale opacity-70 invert">
+                            <div class="text-left opacity-60 flex flex-col items-start">
+                                <img src="competitor_bank.png" alt="NBK/KFH"
+                                    class="h-12 mb-2 object-contain grayscale opacity-70 invert">
                                 <div class="font-bold text-gray-300">Banks (NBK/KFH)</div>
                                 <div class="text-xs text-red-400">Fragmented + Omni-channel</div>
                             </div>
@@ -488,36 +559,42 @@
                     <div class="absolute top-1/2 left-0 w-full h-1 bg-gray-700 -translate-y-1/2 z-0"></div>
                     <div class="grid grid-cols-5 gap-4 relative z-10">
                         <div class="flex flex-col items-center text-center">
-                            <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl shadow-lg border-4 border-gray-800 mb-4">
+                            <div
+                                class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl shadow-lg border-4 border-gray-800 mb-4">
                                 <i class="fas fa-check"></i>
                             </div>
                             <h3 class="font-bold text-white">Today</h3>
                             <p class="text-sm text-gray-400 mt-1">Market Validation<br>& Product Definition</p>
                         </div>
-                         <div class="flex flex-col items-center text-center">
-                            <div class="w-16 h-16 bg-zyada-blue text-white rounded-full flex items-center justify-center text-2xl shadow-lg border-4 border-gray-800 mb-4">
+                        <div class="flex flex-col items-center text-center">
+                            <div
+                                class="w-16 h-16 bg-zyada-blue text-white rounded-full flex items-center justify-center text-2xl shadow-lg border-4 border-gray-800 mb-4">
                                 <i class="fas fa-rocket"></i>
                             </div>
                             <h3 class="font-bold text-white">Launch</h3>
-                            <div class="bg-blue-900 text-blue-200 text-xs font-bold px-2 py-1 rounded mt-1 mb-1">Publisher Strategy</div>
+                            <div class="bg-blue-900 text-blue-200 text-xs font-bold px-2 py-1 rounded mt-1 mb-1">
+                                Publisher Strategy</div>
                             <p class="text-sm text-gray-400">Immediate access to<br>Nike, ASOS, Samsung</p>
                         </div>
-                         <div class="flex flex-col items-center text-center">
-                            <div class="w-16 h-16 bg-gray-700 text-gray-300 rounded-full flex items-center justify-center text-2xl shadow-lg border-4 border-zyada-orange mb-4">
+                        <div class="flex flex-col items-center text-center">
+                            <div
+                                class="w-16 h-16 bg-gray-700 text-gray-300 rounded-full flex items-center justify-center text-2xl shadow-lg border-4 border-zyada-orange mb-4">
                                 <i class="fas fa-chart-line"></i>
                             </div>
                             <h3 class="font-bold text-white">Year 1</h3>
                             <p class="text-sm text-gray-400 mt-1"><b class="text-lg">20,000</b><br>Active Students</p>
                         </div>
-                         <div class="flex flex-col items-center text-center">
-                            <div class="w-16 h-16 bg-gray-700 text-gray-300 rounded-full flex items-center justify-center text-2xl shadow-lg border-4 border-zyada-blue mb-4">
+                        <div class="flex flex-col items-center text-center">
+                            <div
+                                class="w-16 h-16 bg-gray-700 text-gray-300 rounded-full flex items-center justify-center text-2xl shadow-lg border-4 border-zyada-blue mb-4">
                                 <i class="fas fa-users"></i>
                             </div>
                             <h3 class="font-bold text-white">Year 2</h3>
                             <p class="text-sm text-gray-400 mt-1"><b class="text-lg">50,000</b><br>Active Students</p>
                         </div>
-                         <div class="flex flex-col items-center text-center">
-                            <div class="w-16 h-16 bg-gray-800 text-gray-500 rounded-full flex items-center justify-center text-2xl shadow border-4 border-gray-700 mb-4">
+                        <div class="flex flex-col items-center text-center">
+                            <div
+                                class="w-16 h-16 bg-gray-800 text-gray-500 rounded-full flex items-center justify-center text-2xl shadow border-4 border-gray-700 mb-4">
                                 <i class="fas fa-map-marked-alt"></i>
                             </div>
                             <h3 class="font-bold text-gray-400">Expansion</h3>
@@ -532,7 +609,8 @@
         <div class="slide" id="slide-9">
             <div class="h-full flex relative">
                 <!-- Left Panel: Context -->
-                <div class="w-1/3 bg-black text-white p-12 flex flex-col justify-center relative z-20 shadow-xl border-r border-gray-800">
+                <div
+                    class="w-1/3 bg-black text-white p-12 flex flex-col justify-center relative z-20 shadow-xl border-r border-gray-800">
                     <h2 class="text-3xl font-bold text-white mb-6">The "Stipend Economy"</h2>
                     <div class="space-y-6">
                         <div>
@@ -542,31 +620,58 @@
                             <p class="text-xs text-gray-500 mt-2">~90k Students × 200 KWD Stipend</p>
                         </div>
                         <div class="h-px bg-gray-800 w-full"></div>
-                        <p class="text-gray-300 italic">"This cash enters the market every month regardless of employment status."</p>
+                        <p class="text-gray-300 italic">"This cash enters the market every month regardless of
+                            employment status."</p>
                     </div>
                     <!-- Footnote -->
                     <div class="absolute bottom-8 left-12 text-[10px] text-gray-600 w-64 leading-tight">
-                        Source: Aggregated enrollment data from Kuwait University (KU), PAAET, and Ministry of Higher Education (MOHE) Annual Reports (2023/2024).
+                        Source: Aggregated enrollment data from Kuwait University (KU), PAAET, and Ministry of Higher
+                        Education (MOHE) Annual Reports (2023/2024).
                     </div>
                 </div>
 
                 <!-- Right Panel: Visual Overlay -->
                 <div class="w-2/3 bg-gray-900 relative overflow-hidden">
-                    
+
                     <!-- 1. THE DATA (Blurred Background) -->
-                    <div class="absolute inset-0 p-12 opacity-20 filter blur-[2px] select-none pointer-events-none transform scale-95">
+                    <div
+                        class="absolute inset-0 p-12 opacity-20 filter blur-[2px] select-none pointer-events-none transform scale-95">
                         <h3 class="text-2xl font-bold text-gray-500 mb-6">Revenue Forecast (Bottom-Up)</h3>
                         <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden text-sm">
                             <table class="w-full text-left">
                                 <thead class="bg-gray-900 text-gray-500 uppercase text-xs">
-                                    <tr><th class="p-3">Sector</th><th class="p-3">Comm %</th><th class="p-3">Rev</th></tr>
+                                    <tr>
+                                        <th class="p-3">Sector</th>
+                                        <th class="p-3">Comm %</th>
+                                        <th class="p-3">Rev</th>
+                                    </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-800 text-gray-500">
-                                    <tr><td class="p-3">Food & Cafés</td><td class="p-3">5% - 10%</td><td class="p-3">47,600</td></tr>
-                                    <tr><td class="p-3">Fashion</td><td class="p-3">10% - 15%</td><td class="p-3">25,200</td></tr>
-                                    <tr><td class="p-3">Travel</td><td class="p-3">3% - 8%</td><td class="p-3">18,000</td></tr>
-                                    <tr><td class="p-3">Wellness</td><td class="p-3">10% - 20%</td><td class="p-3">13,500</td></tr>
-                                    <tr><td class="p-3">Electronics</td><td class="p-3">3% - 5%</td><td class="p-3">8,000</td></tr>
+                                    <tr>
+                                        <td class="p-3">Food & Cafés</td>
+                                        <td class="p-3">5% - 10%</td>
+                                        <td class="p-3">47,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">Fashion</td>
+                                        <td class="p-3">10% - 15%</td>
+                                        <td class="p-3">25,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">Travel</td>
+                                        <td class="p-3">3% - 8%</td>
+                                        <td class="p-3">18,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">Wellness</td>
+                                        <td class="p-3">10% - 20%</td>
+                                        <td class="p-3">13,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3">Electronics</td>
+                                        <td class="p-3">3% - 5%</td>
+                                        <td class="p-3">8,000</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -574,22 +679,28 @@
 
                     <!-- 2. THE KEY TAKEAWAY (Foreground Card) -->
                     <div class="absolute inset-0 flex items-center justify-center z-10">
-                        <div class="bg-gray-800 p-10 rounded-3xl shadow-2xl border border-gray-700 max-w-md w-full text-center relative overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="bg-gray-800 p-10 rounded-3xl shadow-2xl border border-gray-700 max-w-md w-full text-center relative overflow-hidden transform hover:scale-105 transition-transform duration-500">
                             <!-- Decor element -->
-                            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-zyada-blue to-zyada-orange"></div>
-                            
-                            <div class="mb-2 text-gray-400 font-bold uppercase tracking-widest text-xs">Year 1 Projection</div>
-                            
+                            <div
+                                class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-zyada-blue to-zyada-orange">
+                            </div>
+
+                            <div class="mb-2 text-gray-400 font-bold uppercase tracking-widest text-xs">Year 1
+                                Projection</div>
+
                             <h3 class="text-5xl font-extrabold text-white mb-1">
                                 <span class="text-3xl align-top text-gray-500 font-normal">KWD</span> 186,400
                             </h3>
-                            <div class="bg-green-900/30 text-green-400 text-xs font-bold px-3 py-1 rounded-full inline-block mb-6 border border-green-800">
+                            <div
+                                class="bg-green-900/30 text-green-400 text-xs font-bold px-3 py-1 rounded-full inline-block mb-6 border border-green-800">
                                 Monthly Recurring Revenue
                             </div>
 
                             <div class="space-y-4 text-left border-t border-gray-700 pt-6">
                                 <div class="flex items-center gap-4">
-                                    <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 text-lg">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center text-blue-400 text-lg">
                                         <i class="fas fa-users"></i>
                                     </div>
                                     <div>
@@ -598,7 +709,8 @@
                                     </div>
                                 </div>
                                 <div class="flex items-center gap-4">
-                                    <div class="w-10 h-10 rounded-full bg-orange-900/30 flex items-center justify-center text-zyada-orange text-lg">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-orange-900/30 flex items-center justify-center text-zyada-orange text-lg">
                                         <i class="fas fa-percentage"></i>
                                     </div>
                                     <div>
@@ -621,7 +733,8 @@
                 <div class="flex gap-16">
                     <!-- Hassan -->
                     <div class="text-center group">
-                        <div class="w-64 h-64 mx-auto mb-6 shadow-xl relative rounded-3xl overflow-hidden border-4 border-zyada-blue group-hover:scale-105 transition-transform duration-300">
+                        <div
+                            class="w-64 h-64 mx-auto mb-6 shadow-xl relative rounded-3xl overflow-hidden border-4 border-zyada-blue group-hover:scale-105 transition-transform duration-300">
                             <img src="hassan.png" alt="Hassan Al-Shammasi" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-2xl font-bold text-white">Hassan Al-Shammasi</h3>
@@ -634,14 +747,31 @@
 
                     <!-- Adam (CTO) -->
                     <div class="text-center group">
-                        <div class="w-64 h-64 mx-auto mb-6 shadow-xl relative rounded-3xl overflow-hidden border-4 border-gray-600 group-hover:scale-105 transition-transform duration-300">
-                             <img src="adam.png" alt="Adam Mehina" class="w-full h-full object-cover">
+                        <div
+                            class="w-64 h-64 mx-auto mb-6 shadow-xl relative rounded-3xl overflow-hidden border-4 border-gray-600 group-hover:scale-105 transition-transform duration-300">
+                            <img src="adam.png" alt="Adam Mehina" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-2xl font-bold text-white">Adam Mehina</h3>
-                        <p class="text-gray-500 font-bold uppercase tracking-wider text-sm mt-1">Chief Technology Officer</p>
+                        <p class="text-gray-500 font-bold uppercase tracking-wider text-sm mt-1">Chief Technology
+                            Officer</p>
                         <div class="mt-4 max-w-xs mx-auto text-gray-400 text-sm">
                             <p class="font-bold text-blue-400 mb-1">8+ Years Tech Experience</p>
                             <p>Specialist in Affiliate API Integrations & NFC Wallet Security.</p>
+                        </div>
+                    </div>
+
+                    <!-- Reem (Mentor) -->
+                    <div class="text-center group">
+                        <div
+                            class="w-64 h-64 mx-auto mb-6 shadow-xl relative rounded-3xl overflow-hidden border-4 border-gray-300 group-hover:scale-105 transition-transform duration-300">
+                            <!-- Ensure file is named 'reem.png' -->
+                            <img src="reem.png" alt="Reem Al-Farhan" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Reem Al-Farhan</h3>
+                        <p class="text-gray-500 font-bold uppercase tracking-wider text-sm mt-1">Mentor</p>
+                        <div class="mt-4 max-w-xs mx-auto text-gray-600 text-sm">
+                            <p class="font-bold text-zyada-blue mb-1">Serial Entrepreneur</p>
+                            <p>CEO and Founder of CTC.</p>
                         </div>
                     </div>
                 </div>
@@ -656,10 +786,11 @@
                     <p class="text-xl opacity-90 mb-12">Financing the 9-month sprint from Concept to MVP Launch.</p>
                     <div class="text-7xl font-bold text-zyada-orange mb-2">25,000</div>
                     <div class="text-2xl font-light uppercase tracking-widest mb-8">KWD Pre-Seed</div>
-                    
+
                     <!-- NEW DELIVERABLES BOX -->
                     <div class="bg-black/20 p-6 rounded-lg backdrop-blur-sm border border-white/20">
-                        <h4 class="font-bold mb-4 text-orange-300 uppercase tracking-widest text-xs">The Deliverables (9 Months)</h4>
+                        <h4 class="font-bold mb-4 text-orange-300 uppercase tracking-widest text-xs">The Deliverables (9
+                            Months)</h4>
                         <div class="space-y-4">
                             <div class="flex items-center justify-between border-b border-white/10 pb-2">
                                 <span>Development</span>
@@ -679,8 +810,10 @@
                 </div>
                 <div class="w-1/2 p-16 bg-gray-900 flex flex-col justify-center items-center">
                     <h3 class="text-xl font-bold text-white mb-8 uppercase tracking-wider">Use of Funds</h3>
-                    <div class="relative w-80 h-80 rounded-full border-[30px] border-gray-800 flex items-center justify-center">
-                        <div class="absolute inset-0 rounded-full" style="background: conic-gradient(
+                    <div
+                        class="relative w-80 h-80 rounded-full border-[30px] border-gray-800 flex items-center justify-center">
+                        <div class="absolute inset-0 rounded-full"
+                            style="background: conic-gradient(
                             #0044cc 0% 66%, 
                             #ff6600 66% 84%, 
                             #9ca3af 84% 100%
@@ -689,13 +822,16 @@
                             <div class="text-3xl font-bold text-white">100%</div>
                             <div class="text-xs text-gray-500">Allocation</div>
                         </div>
-                        <div class="absolute -top-4 right-0 bg-gray-800 shadow-lg p-2 rounded text-xs border-l-4 border-zyada-blue text-white">
+                        <div
+                            class="absolute -top-4 right-0 bg-gray-800 shadow-lg p-2 rounded text-xs border-l-4 border-zyada-blue text-white">
                             <b>66% Tech & Product</b><br>16,500 KWD
                         </div>
-                        <div class="absolute bottom-4 left-0 bg-gray-800 shadow-lg p-2 rounded text-xs border-l-4 border-zyada-orange text-white">
+                        <div
+                            class="absolute bottom-4 left-0 bg-gray-800 shadow-lg p-2 rounded text-xs border-l-4 border-zyada-orange text-white">
                             <b>18% Marketing</b><br>4,500 KWD
                         </div>
-                        <div class="absolute top-4 left-0 bg-gray-800 shadow-lg p-2 rounded text-xs border-l-4 border-gray-400 text-white">
+                        <div
+                            class="absolute top-4 left-0 bg-gray-800 shadow-lg p-2 rounded text-xs border-l-4 border-gray-400 text-white">
                             <b>16% Ops/Legal</b><br>4,000 KWD
                         </div>
                     </div>
@@ -706,8 +842,9 @@
         <!-- SLIDE 12: FINAL (DARK) -->
         <div class="slide" id="slide-12">
             <div class="w-full h-full flex flex-col items-center justify-center bg-gray-900 text-white relative">
-                 <div class="mb-12">
-                    <div class="h-40 w-40 bg-zyada-blue rounded-xl shadow-2xl flex items-center justify-center text-4xl text-white font-bold tracking-tighter">
+                <div class="mb-12">
+                    <div
+                        class="h-40 w-40 bg-zyada-blue rounded-xl shadow-2xl flex items-center justify-center text-4xl text-white font-bold tracking-tighter">
                         zyada.
                     </div>
                 </div>
@@ -721,16 +858,16 @@
                         <div class="font-bold text-xl">Hassan Al-Shammasi</div>
                     </div>
                     <div>
-                         <div class="text-xs text-gray-500 uppercase tracking-widest mb-1">Mobile</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-widest mb-1">Mobile</div>
                         <div class="font-bold text-xl">(+965) 9493-5907</div>
                     </div>
                     <div>
-                         <div class="text-xs text-gray-500 uppercase tracking-widest mb-1">Email</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-widest mb-1">Email</div>
                         <div class="font-bold text-xl text-blue-400">Ha.alshammasi@gmail.com</div>
                     </div>
                     <!-- ADDED IG HERE -->
                     <div>
-                         <div class="text-xs text-gray-500 uppercase tracking-widest mb-1">Instagram</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-widest mb-1">Instagram</div>
                         <div class="font-bold text-xl text-zyada-orange">@Zyada.KWT</div>
                     </div>
                 </div>
@@ -781,7 +918,7 @@
         }
 
         // Initialize first slide
-        window.onload = function() {
+        window.onload = function () {
             updateSlide();
         };
 
@@ -792,4 +929,5 @@
         });
     </script>
 </body>
+
 </html>
